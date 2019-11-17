@@ -1,0 +1,1 @@
+LoadJSON (" https://zagster-service.herokuapp.com/rides/count/per_hour")
