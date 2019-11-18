@@ -3,6 +3,8 @@
 <head>
 <link rel="stylesheet" href="main.css">
     <title>Zagster Data Visualization</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">
+    </script>
     <script
     src="https://code.jquery.com/jquery-3.3.1.min.js"
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -13,24 +15,10 @@
 <body>
     <h1> This is a visualization of Zagster bike share data.</h1>
     <h2>This is a rough sketch of what this visualization will look like.</h2>
-    <P><img src="Zagster_drawing_JPEG.jpg" width="75%" height="75%"></P>
-
-<script src="https://zagster-service.herokuapp.com/rides/count/per_hour"></script>
-<script>
-$(document).ready(function(){
-  $("button").click(function(){
-    $.getJSON("demo_ajax_json.js", function(result){
-      $.each(result, function(i, field){
-        $("div").append(field + " ");
-      });
-    });
-  });
-});
-</script>
-</head>
-<body>
-
-<button>Get JSON data</button>
+    <h3 id="rideCount"> Data Goes here</h3>
+    <div>
+      <img src="Zagster_drawing_JPEG.jpg" width="75%" height="75%">
+    </div>
 </body>
 
 </html>
