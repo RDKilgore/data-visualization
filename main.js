@@ -1,1 +1,5 @@
-LoadJSON (" https://zagster-service.herokuapp.com/rides/count/per_hour")
+var jcontent ={
+    
+}
+ var output = document.getElementById('output')
+ output.innerHTML = 'newcontent';
