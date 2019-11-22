@@ -1,16 +1,17 @@
-  const BASE_URL = "https://zagster-service.herokuapp.com"
-
 $(updateGraph)
 $(updateView)
+// grabbing data from this site 
+const BASE_URL = "https://zagster-service.herokuapp.com"
+//function of update view 
 function updateView() {
   $.getJSON(BASE_URL + "/rides/count" , updateRideCount)
 }
-
+//grabs the id ridecount  
 function updateRideCount(data) {
   numberOfRides = data.count
   $("h3#rideCount").html(numberOfRides)
 }
-
+//creates chart 
 function updateGraph() {
 var ctx = document.getElementById('myChart').getContext('2d');
 var chart = new Chart(ctx, {
