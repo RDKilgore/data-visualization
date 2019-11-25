@@ -11,6 +11,9 @@ function updateRideCount(data) {
   numberOfRides = data.count
   $("h3#rideCount").html(numberOfRides)
 }
+
+console.log(numberOfRides)
+
 //creates chart 
 function updateGraph() {
 var ctx = document.getElementById('myChart').getContext('2d');
