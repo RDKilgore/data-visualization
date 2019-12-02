@@ -30,31 +30,26 @@ function updateView() {
 function perHour(data) {
 
     // data2016 = [{"9":220},{"10":141},{"11":89},{"12":16}]
-    var data = data[]  //extract the informatio associated with the key "2016" and put this info in a variable called data2016
+    ///extract the informatio associated with the key "2016" and put this info in a variable called data2016
 
     //extracting data for each month.We need to  specify which object and then specify the key before we can get the data for that key
     //So data2016[0][9] means look at the zero-ith array element {"9":220} and extract the data associated the key 9
     //result should be 220 
-    console.log(data[0]) //print daya to the console to make sure we did it right
-    my_data.push(data2016[0]) //add the data to the my_data array 
-    console.log(data2016[1][10])  //looks at the one-ith array element {"10":141} extract data for key 10
-    my_data.push(data2016[1][10])
-    console.log(data2016[2][11])
-    my_data.push(data2016[2][11])
-    console.log(data2016[3][12])
-    my_data.push(data2016[3][12])
-    //keep going to get all data points
-
-
-    //challenge - use a loop to extract the data
-    //challenge extract the keys from the JSON data instead of manually typing them into the chart
+    hours = []
+    for(i=0; i<24; i=i+1){
+        console.log(data[i]) //print daya to the console to make sure we did it right
+        my_data.push(data[i]) 
+        hours.push(i)
+    }
+    $(updateChart(my_data, hours))
+   //add the data to the my_data array 
      
   }
   
 // Funtion definition for updateChart()
 // This function creates your chart
 // Make sure you have a <canvas> element in your index with an id="myChart"
-function updateChart() {
+function updateChart(my_data, hours) {
     var ctx = document.getElementById('myChart').getContext('2d');
     var chart = new Chart(ctx, {
         // The type of chart we want to create
@@ -62,7 +57,7 @@ function updateChart() {
 
         // The data for our dataset
         data: {
-            labels: ['September', 'October'],
+            labels: hours,
             datasets: [{
                 label: 'Zagster Number of Rides Per Month in 2016',
                 backgroundColor: 'rgb(255, 99, 132)',
