@@ -31,7 +31,7 @@ function perHour(data) {
 
     hours = []
     for(i=0; i<24; i=i+1){
-        console.log(data[i]) //print daya to the console to make sure we did it right
+        console.log(data[i]) //print data to the console to make sure we did it right
         my_data.push(data[i]) 
         hours.push(i)
     }
