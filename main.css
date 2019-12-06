@@ -4,19 +4,23 @@ body {
   }
   
   h1 {
-    font-size: 2em;
+    font-size: 50px;
     margin: 0px;
-    color: white;
+    color: pink;
+    text-align: center;
   }
   h2{
     color: white;
-    font-size: 1em;
+    font-size: 25px;
+    text-align: center;
   }
   h3{
     color: white;
-    font-size: 2em;
+    font-size: 19px;
+    text-align: center;
   }
   p {
     margin: 0px;
     font-size: 1em;
+    color: white;
   }
