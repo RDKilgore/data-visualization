@@ -1,12 +1,22 @@
 body {
     font-family: "HelveticaNeue", "Arial", sans-serif;
+    background-color: black;
   }
   
   h1 {
-    font-size: 4em;
+    font-size: 2em;
     margin: 0px;
+    color: white;
   }
-  
+  h2{
+    color: white;
+    font-size: 1em;
+  }
+  h3{
+    color: white;
+    font-size: 2em;
+  }
   p {
     margin: 0px;
+    font-size: 1em;
   }
